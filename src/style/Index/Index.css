@@ -1,0 +1,77 @@
+.el-container .el-header {
+  position: relative;
+  padding: 0;
+  color: var(--black);
+  text-align: center;
+  border-bottom: var(--borderBottom);
+  background: var(--OpacityBackground0);
+}
+
+.el-aside {
+  color: var(--black);
+  text-align: center;
+  line-height: 200px;
+}
+
+.el-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.ContentBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .el-container .el-header {
+    background: var(--black);
+    border-bottom: 2px solid var(--DeepBlueColor);
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* 大屏幕(大屏电脑):col-lg(>1200px) 
+中等屏幕(电脑):col-md(>=992px)
+小屏幕(平板):col-sm(>=768px)
+超小屏幕(手机):col-xs(<768px) */
+
+/* 超大屏幕(电脑) */
+@media screen and (min-width: 1200px) {
+}
+
+/* 大屏幕(电脑) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* 中等屏幕(电脑) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* 小屏幕(平板) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .el-container .el-header {
+    display: none;
+  }
+
+  .SuspendedNavigation {
+    top: 1%;
+    opacity: 1;
+  }
+}
+
+/* 超小屏幕(手机) */
+@media screen and (max-width: 480px) {
+  .el-container .el-header {
+    display: none;
+  }
+
+  .SuspendedNavigation {
+    top: 1%;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,201 @@
+.NavigationVertical {
+  position: relative;
+  width: 0;
+  min-width: 0;
+  max-width: 250px;
+  height: 100%;
+  transition: var(--transition);
+  box-shadow: var(--ordinaryBoxShadow);
+  background-color: var(--NavigationBarBackground);
+  z-index: var(--ZIndexPopOut);
+}
+
+.NavigationVertical.IsActive {
+  min-width: 250px;
+}
+
+.NavigationVertical:hover {
+  box-shadow: var(--SmokeBoxShadow);
+}
+
+.NavigationVertical .el-scrollbar .el-menu {
+  border: none;
+  background: transparent;
+  user-select: none;
+  font-family: "STXihei";
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.el-menu.el-menu--inline .el-sub-menu .el-sub-menu__title {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.el-menu .el-sub-menu .el-menu-item {
+  background: var(--OpacityBackground005);
+  background-color: transparent;
+}
+
+/* 选中项样式 */
+.el-menu-item.is-active {
+  color: #5940f2;
+}
+
+.NavigationVertical .NavigationMenu input[type="checkbox"] {
+  display: none;
+}
+
+.NavigationMenu {
+  cursor: pointer;
+}
+
+.NavigationVertical .NavigationMenu > label {
+  position: absolute;
+  top: 2%;
+  right: -30px;
+  width: 30px;
+  height: 70px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: var(--FocusBoxShadow);
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: var(--transition);
+  z-index: var(--ZIndexLogo);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.NavigationVertical .NavigationMenu label > .el-icon {
+  display: block;
+  font-size: var(--FontSize-18);
+  color: var(--LogoCheckedColor);
+  font-weight: 900;
+  text-indent: -2px;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+
+.NavigationVertical .NavigationMenu > input#menuBtn:checked + label > .el-icon {
+  transform: rotate(180deg);
+  transition: var(--transition);
+}
+
+/* 导航栏搜索框样式 */
+.Search {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: var(--transition);
+}
+
+.Search .el-icon {
+  position: absolute;
+  top: 51%;
+  left: 7%;
+  transform: translateY(-50%);
+  width: 12%;
+  font-size: var(--FontSize-30);
+  color: var(--white);
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.Search input {
+  width: 90%;
+  min-height: 36px;
+  padding-left: 15%;
+  padding-top: 0.5%;
+  padding-bottom: 0%;
+  padding: 0.5% 6% 0 15%;
+  border: none;
+  outline: none;
+  color: var(--black);
+  font-size: var(--FontSize-18);
+  border-radius: 18px;
+  box-sizing: border-box;
+  box-shadow: var(--SmokeBoxShadow);
+  background: var(--PropleColor);
+  transition: var(--transition);
+  color: var(--white);
+}
+
+.Search input::placeholder {
+  color: var(--white);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--FontSize-18);
+}
+
+.Search input:focus + a .el-icon,
+.Search input:hover + a .el-icon {
+  color: var(--HoverFoucsColor);
+}
+
+@media (prefers-color-scheme: dark) {
+  .NavigationVertical {
+    background-color: var(--black);
+  }
+  .NavigationVertical .NavigationMenu > label {
+    background: var(--white);
+    box-shadow: var(--FocusBoxShadowDark);
+  }
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* 大屏幕(大屏电脑):col-lg(>1200px) 
+中等屏幕(电脑):col-md(>=992px)
+小屏幕(平板):col-sm(>=768px)
+超小屏幕(手机):col-xs(<768px) */
+
+/* 超大屏幕(电脑) */
+@media screen and (min-width: 1200px) {
+}
+
+/* 大屏幕(电脑) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* 中等屏幕(电脑) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .NavigationVertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--ZIndexPopOut);
+  }
+
+  .NavigationVertical .NavigationMenu > label {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .NavigationVertical .NavigationMenu > input#menuBtn:checked .Mask {
+    display: block;
+  }
+}
+
+/* 小屏幕(平板) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .NavigationMenu {
+    display: none;
+  }
+}
+
+/* 超小屏幕(手机) */
+@media screen and (max-width: 480px) {
+  .NavigationMenu {
+    display: none;
+  }
+}

@@ -1,0 +1,310 @@
+html,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "microsoft yahei";
+}
+
+a,
+label,
+input,
+span {
+  transition: all 0.5s;
+}
+
+html {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+  user-select: none;
+}
+
+body {
+  height: 100%;
+  display: table-cell;
+}
+
+.RowTitle {
+  height: 20%;
+  padding: 3% 3% 3% 3%;
+  transition: all 0.5s;
+  border: 1px solid red;
+}
+
+.RowBody {
+  height: 80%;
+  transition: all 0.5s;
+}
+
+.RowBodyCol2 {
+  height: 100%;
+  float: right;
+  padding: 5% 0 0 0;
+}
+
+.LoginPage-Title {
+  display: block;
+  text-align: center;
+  font-size: 45px;
+  color: #323232;
+  transition: all 0.8s;
+}
+
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(180deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.BackgroundImg {
+  position: fixed;
+  top: 0;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.body {
+  margin: 0 auto;
+  width: 470px;
+  height: 476px;
+  border-radius: 3.5%;
+  overflow: hidden;
+  transition: all 0.5s;
+  background: rgba(255, 255, 255, 1);
+  -webkit-box-shadow: #dadbdc 0px 5px 15px;
+  -moz-box-shadow: #dadbdc 0px 5px 15px;
+  box-shadow: #dadbdc 0px 5px 15px;
+}
+
+.body > div {
+  position: relative;
+  border-radius: 3.5%;
+  transition: all 0.45s;
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding: 0 5% 5% 5%;
+}
+
+.Login-Title {
+  margin-top: 5%;
+  height: 10%;
+  line-height: 1.5;
+  display: block;
+  font-size: 28px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.QrCode {
+  position: absolute;
+  top: 5.5%;
+  right: 5.5%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.QrCodeImg {
+  width: 100%;
+  height: 84%;
+  border-radius: 1.5%;
+}
+
+.QrCode:hover {
+  color: #0d6efd;
+}
+
+.FallBack {
+  position: absolute;
+  /* top: 4.5%;
+	right: 5.2%; */
+  width: 30px;
+  height: 30px;
+  top: 6.5%;
+  left: 5%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.FallBack:hover {
+  color: #0d6efd;
+}
+
+.InputForm input {
+  height: 56px;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+.InputForm label {
+  line-height: 24px;
+  transition: all 0.15s;
+}
+
+.padding-30 {
+  padding-right: 30%;
+}
+
+.VerificationCode {
+  width: 110px;
+  height: 50px;
+  border: 1px solid #ced4da;
+}
+
+.RemeberPassword {
+  cursor: pointer;
+  color: #6c6a69;
+  font-size: 15px;
+}
+
+.Register {
+  color: #6764d6;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.Register:hover {
+  color: #6764d6;
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 160px;
+  height: 48px;
+  font-size: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 520px) {
+  .body {
+    margin: 0 auto;
+    width: 350px;
+    height: 430px;
+    border-radius: 3.5%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 1);
+    -webkit-box-shadow: #dadbdc 0px 5px 15px;
+    -moz-box-shadow: #dadbdc 0px 5px 15px;
+    box-shadow: #dadbdc 0px 5px 15px;
+    transition: all 0.5s;
+  }
+
+  .InputForm input {
+    max-height: 50px;
+    font-size: 20px;
+    transition: all 0.3s;
+  }
+
+  .InputForm label {
+    line-height: 18px;
+    transition: all 0.3s;
+  }
+
+  .QrCode {
+    position: absolute;
+    top: 5.2%;
+    right: 5.6%;
+    width: 24px;
+    height: 24px;
+  }
+
+  .QrCode:hover {
+    text-align: center;
+    color: #0d6efd;
+  }
+
+  .FallBack {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6.5%;
+    left: 5%;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .LoginPage-Title {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    padding: 10% 0 0 0;
+    color: #323232;
+    transition: all 0.8s;
+  }
+
+  .Login-Title {
+    margin-top: 5%;
+    height: 9%;
+    line-height: 1.5;
+    display: block;
+    font-size: 22px;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  .QrCodeImg {
+    height: 86%;
+  }
+
+  .padding-30 {
+    padding-right: 20%;
+  }
+
+  .btn-submit {
+    width: 120px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+  }
+
+  .RowBodyCol2 {
+    height: 100%;
+    float: right;
+    padding: 0;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* 大屏幕(大屏电脑):col-lg(>1200px) 
+中等屏幕(电脑):col-md(>=992px)
+小屏幕(平板):col-sm(>=768px)
+超小屏幕(手机):col-xs(<768px) */
+
+/* 超大屏幕(电脑) */
+@media screen and (min-width: 1200px) {
+}
+
+/* 大屏幕(电脑) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* 中等屏幕(电脑) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* 小屏幕(平板) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* 超小屏幕(手机) */
+@media screen and (max-width: 480px) {
+}

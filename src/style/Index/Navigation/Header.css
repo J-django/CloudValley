@@ -1,0 +1,245 @@
+@import url(https://fonts.googleapis.com/css?family=Hanalei+Fill);
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhaijaan&display=swap");
+
+.el-row {
+  line-height: 60px;
+}
+
+.HeaderRow .el-col {
+  height: 60px;
+  border-radius: 0px;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.HeaderRow .el-col:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.MainIcon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  user-select: none;
+}
+
+.MainIcon span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Baloo Bhaijaan", cursive;
+  letter-spacing: 2px;
+  color: var(--RedColor);
+  text-shadow: 0 2px var(--DeepBlueColor);
+  font-size: var(--FontSize-2-5em);
+  font-weight: 900;
+  font-style: italic;
+  overflow: hidden;
+  user-select: none;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px var(--DeepBlueColor);
+}
+
+.UsersSetting {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  height: 50px;
+  line-height: 50px;
+  -webkit-tap-highlight-color: none;
+}
+
+.UsersSetting .el-avatar {
+  border-radius: 18px;
+  min-height: 50px;
+  min-width: 50px;
+}
+
+.UsersSetting .el-avatar img {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+/* 弹出下拉框 */
+.el-dropdown-menu {
+  position: relative;
+  padding: 5%;
+  overflow-anchor: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  max-height: 150px;
+  min-width: 220px;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 8px;
+}
+
+.el-dropdown-menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  box-shadow: none;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.clearfix:not(.clearfix:nth-child(1)) {
+  margin-top: 4px;
+}
+
+.el-dropdown-menu .clearfix:hover {
+  color: #333;
+  background-color: rgba(233, 236, 239, 1);
+}
+
+.el-dropdown-menu .clearfix:active {
+  color: #fff;
+  background: #0d6efd;
+  background-color: rgba(13, 110, 253, 1);
+}
+
+.el-dropdown-menu .clearfix .el-switch {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(233, 236, 239, 1);
+  border-radius: 6px;
+}
+
+.el-dropdown-menu hr {
+  position: relative;
+  border: none;
+  border-bottom: 1px solid #dcdfe6;
+  border-radius: 10px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.el-dropdown-menu hr::after {
+  content: attr(data-text);
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0% 1%;
+  color: var(--DeepBlueColor);
+  letter-spacing: 2px;
+  background: var(--white);
+}
+
+/* 深色模式 */
+.el-dropdown-menu.IsDark {
+  background: rgba(52, 58, 64, 1);
+  transition: var(--transition);
+}
+
+.el-dropdown-menu.IsDark .clearfix {
+  color: #fff;
+}
+
+.el-dropdown-menu.IsDark .clearfix:hover {
+  color: #fff;
+  background-color: rgba(82, 87, 92, 1);
+}
+
+.el-dropdown-menu.IsDark .clearfix:active {
+  color: #fff;
+  background: #0d6efd;
+  background-color: rgba(13, 110, 253, 1);
+}
+
+.el-dropdown-menu.IsDark .clearfix .el-switch {
+  background: rgba(13, 110, 253, 1);
+  transition: var(--transition);
+}
+
+.el-dropdown-menu.IsDark hr::after {
+  color: rgba(233, 236, 239, 1);
+  background-color: rgba(52, 58, 64, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .MainIcon span {
+    color: var(--ExpressionpatternLogoColor);
+    text-shadow: 0 0 10px #0aafe6, 0 2px #daf6ff;
+  }
+
+  .el-dropdown-menu {
+    background-color: var(--black);
+    transition: var(--transition);
+  }
+
+  .el-dropdown-menu .clearfix {
+    color: #fff;
+  }
+
+  .el-dropdown-menu .clearfix:hover {
+    color: #fff;
+    background-color: rgba(82, 87, 92, 1);
+  }
+
+  .el-dropdown-menu .clearfix:active {
+    color: #fff;
+    background: #0d6efd;
+    background-color: rgba(13, 110, 253, 1);
+  }
+
+  .el-dropdown-menu .clearfix .el-switch {
+    background: rgba(13, 110, 253, 1);
+    transition: var(--transition);
+  }
+
+  .el-dropdown-menu hr::after {
+    color: rgba(233, 236, 239, 1);
+    background-color: var(--black);
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* 大屏幕(大屏电脑):col-lg(>1200px) 
+中等屏幕(电脑):col-md(>=992px)
+小屏幕(平板):col-sm(>=768px)
+超小屏幕(手机):col-xs(<768px) */
+
+/* 超大屏幕(电脑) */
+@media screen and (min-width: 1200px) {
+}
+
+/* 大屏幕(电脑) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* 中等屏幕(电脑) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* 小屏幕(平板) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* 超小屏幕(手机) */
+@media screen and (max-width: 480px) {
+}

@@ -1,0 +1,70 @@
+.SuspendedNavigation {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: flex-start;
+  top: -50%;
+  margin-top: var(--margin);
+  width: 91.5%;
+  height: var(--SusPersionHeight);
+  background: rgba(230, 230, 230, 0.4);
+  /* background: rgba(0, 0, 0, 0.4); */
+  border-radius: 28px;
+  backdrop-filter: var(--backdrop-filter);
+  -webkit-backdrop-filter: var(--webkit-backdrop-filter);
+  box-shadow: var(--SmokeBoxShadow);
+  z-index: var(--ZIndexNavigation);
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.SuspendedNavigation ul {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.SuspendedNavigation ul li {
+  list-style: none;
+}
+
+.SuspendedNavigation ul li:not(.SuspendedNavigation ul li:nth-child(1)) {
+}
+
+.SuspendedNavigation ul li a {
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* 大屏幕(大屏电脑):col-lg(>1200px) 
+中等屏幕(电脑):col-md(>=992px)
+小屏幕(平板):col-sm(>=768px)
+超小屏幕(手机):col-xs(<768px) */
+
+/* 超大屏幕(电脑) */
+@media screen and (min-width: 1200px) {
+}
+
+/* 大屏幕(电脑) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* 中等屏幕(电脑) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* 小屏幕(平板) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* 超小屏幕(手机) */
+@media screen and (max-width: 480px) {
+}
