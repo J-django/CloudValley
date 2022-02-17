@@ -7,12 +7,20 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
 运用技术
--[vue3]
+-vue3
+
 -vite2
+
 -vue-router
+
 -loadsh
+
 -element-plus
+
 --element-plus-icons
+
 -pinia
+
 -echarts
+
 -axios
